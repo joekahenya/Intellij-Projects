@@ -1,0 +1,35 @@
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns:tns="http://localhost:8080/webservice"
+        targetNamespace="http://localhost:8080/webservice"
+        elementFormDefault="qualified">
+
+    <xs:element name="getGuestRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="name" type="xs:string" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getGuestResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="guest" type="tns:guest" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="guest">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string" />
+            <xs:element name="phoneNumber" type="xs:string" />
+            <xs:element name="email" type="xs:string" />
+            <xs:element name="checkIn" type="xs:string" />
+            <xs:element name="checkOut" type="xs:string" />
+            <xs:element name="roomType" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+
+</xs:schema>
